@@ -22,3 +22,9 @@ map("n", "]b", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 map("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 map("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
 map("n", "<leader>bD", "<cmd>:bd<cr>", { desc = "Delete Buffer and Window" })
+
+
+map("n", "<leader>ml", "<C-w>l", { desc = "Move to the right window" })
+map("n", "<leader>mh", "<C-w>h", { desc = "Move to the left window" })
+map("n", "<leader>mj", "<C-w>j", { desc = "Move to the bottom window" })
+map("n", "<leader>mk", "<C-w>k", { desc = "Move to the top window" })

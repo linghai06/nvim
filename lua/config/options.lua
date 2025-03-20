@@ -4,7 +4,7 @@
 
 vim.g.mapleader = ";"
 vim.g.autoformat = false
-vim.g.lazyvim_picker = "fzf"
+vim.g.lazyvim_picker = 'fzf'
 
 -- views can only be fully collapsed with the global statusline
 vim.opt.laststatus = 3

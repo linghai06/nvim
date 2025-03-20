@@ -116,15 +116,9 @@ return {
         },
       },
       grep = {
-        cmd = "rg",
-        args = "--hidden --vimgrep --smart-case --color=always",
         actions = {
           ["alt-i"] = { actions.toggle_ignore },
           ["alt-h"] = { actions.toggle_hidden },
-        },
-        fzf_opts = {
-          ["--exact"] = false, -- Disable exact matching
-          ["--literal"] = false, -- Allow fuzzy pattern matching
         },
         git_icons = true, -- Show git status
       },
@@ -183,7 +177,7 @@ return {
     -- { "<leader>/", LazyVim.pick("live_grep"), desc = "Grep (Root Dir)" },
     -- { "<leader>/", LazyVim.pick("live_grep", { root = false }), desc = "Grep (cwd)" },
 
-    { "<leader>/", "<cmd>FzfLua live_grep<cr>", desc = "Fuzzy Grep (Root)" },
+    { "<leader>/", "<cmd>FzfLua grep<cr>", desc = "Fuzzy Grep (Root)" },
 
     { "<leader>:", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
     { "<leader><space>", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
