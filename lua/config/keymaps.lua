@@ -28,3 +28,14 @@ map("n", "<leader>ml", "<C-w>l", { desc = "Move to the right window" })
 map("n", "<leader>mh", "<C-w>h", { desc = "Move to the left window" })
 map("n", "<leader>mj", "<C-w>j", { desc = "Move to the bottom window" })
 map("n", "<leader>mk", "<C-w>k", { desc = "Move to the top window" })
+
+
+
+vim.keymap.set('n', '<leader>q', function()
+  local bufs = vim.fn.getbufinfo({ buflisted = true })
+  if #bufs == 1 then
+    vim.cmd('quit')
+  else
+    vim.cmd('bdelete')
+  end
+end, { desc = 'Close buffer or quit if last' })
